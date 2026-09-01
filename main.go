@@ -10,7 +10,7 @@ import (
 
 func main() {
 	port := os.Getenv("PORT")
-	if port == " " {
+	if port == "" {
 		port = "8000"
 	}
 
@@ -23,7 +23,7 @@ func main() {
 	routes.MenuRoutes(router)
 	routes.TableRoutes(router)
 	routes.OrderRoutes(router)
-	routes.oredrItemRoutes(router)
+	routes.OrderItemRoutes(router)
 	routes.InvoiceRoutes(router)
 
 	router.Run(":" + port)
