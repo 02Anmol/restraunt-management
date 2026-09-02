@@ -5,6 +5,7 @@ go 1.25.4
 require (
 	github.com/gin-gonic/gin v1.12.0
 	github.com/lib/pq v1.12.3
+	go.mongodb.org/mongo-driver v1.17.9
 )
 
 require (
