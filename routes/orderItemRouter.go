@@ -8,7 +8,7 @@ import (
 
 func OrderItemRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.GET("/orderItems", controller.GetOrderItem())
-	incomingRoutes.GET("/orderItems/:orderItem_id", controller.GetorderItem())
-	incomingRoutes.POST("/orderItems", controller.CreateorderItem())
-	incomingRoutes.PATCH("/orderItems/:orderItem_id", controller.UpdateorderItems())
+	incomingRoutes.GET("/orderItems/:orderItem_id", controller.GetOrderItem())
+	incomingRoutes.POST("/orderItems", controller.CreateOrderItem())
+	incomingRoutes.PATCH("/orderItems/:orderItem_id", controller.UpdateOrderItem())
 }
