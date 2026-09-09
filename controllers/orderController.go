@@ -59,9 +59,10 @@ func GetOrder() gin.HandlerFunc {
 
 func CreateOrder() gin.HandlerFunc {
 	return func(c *gin.Context) {
+		var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
 		// Implement creation logic here
 		var table models.Table
-		var order model.Order
+		var order models.Order
 
 		if err := c.BindJSON(&order); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
